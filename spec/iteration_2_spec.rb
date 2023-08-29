@@ -1,4 +1,3 @@
-require './lib/super_fizz_buzz'
 require './lib/iteration_2'
 
 RSpec.describe 'Super Fizz Buzz' do
@@ -15,7 +14,7 @@ RSpec.describe 'Super Fizz Buzz' do
       input = super_fizz.output(8)
       fizzbuzz = super_fizz.output(15)
 
-      expect(input).to eq(8)
+      expect(input).to eq("8")
       expect(fizzbuzz).to eq("FizzBuzz")
     end
   end
@@ -23,7 +22,7 @@ RSpec.describe 'Super Fizz Buzz' do
   describe '#output_range' do
     it 'will return the output of all numbers between arguments' do
       super_fizz = SuperFizzBuzz.new
-      outputs = super_fizz.output_range(8)
+      outputs = super_fizz.output_range(8, 15)
 
       expect(outputs).to eq(["8", "Fizz", "Buzz", "11", "Fizz", "13", "Super", "FizzBuzz"])
     end
